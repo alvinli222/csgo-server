@@ -16,7 +16,7 @@ spec:
         app: csgo-deployment
     spec:
       containers:
-      - image: csgoserver.azurecr.io/csgo-server:latest
+      - image: csgoserver.azurecr.io/csgo-server
         name: csgo-server
         ports:
         - containerPort: 27015
