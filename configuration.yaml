@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  autoexec.cfg: |
+    hostname "Counter-Strike: Global Offensive Dedicated Server"
+    sv_cheats 0 //This should always be set, so you know it's not on
+    sv_lan 0 //This should always be set, so you know it's not on
+    exec banned_user.cfg
+    exec banned_ip.cfg
+  server.cfg: |
+    mp_autoteambalance 0
+    mp_limitteams 0
+    mp_freezetime 0
+    mp_autokick 0
+    mp_round_restart_delay 5.0
+    mp_halftime_duration 5
+    mp_match_end_restart_delay 10
+    writeid
+    writeip
+kind: ConfigMap
+metadata:
+  name: csgo-configuration
+  namespace: csgo-server

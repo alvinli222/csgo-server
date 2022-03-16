@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  SRCDS_TOKEN: 89A3F3691A7F8557304B77A8E84E80BC
+kind: Secret
+metadata:
+  name: steam-token
+  namespace: csgo-server
