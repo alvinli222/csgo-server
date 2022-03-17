@@ -16,7 +16,7 @@ spec:
         app: csgo-deployment
     spec:
       containers:
-      - image: csgoserver.azurecr.io/csgo-server
+      - image: csgoserver.azurecr.io/csgo:latest
         name: csgo-server
         ports:
         - containerPort: 27015
@@ -36,6 +36,7 @@ spec:
         - name: csgo-configuration-server-cfg
           mountPath: /home/steam/csgo/csgo/server.cfg
           subPath: server.cfg
+
         - name: csgo-configuration-autoexec-cfg
           mountPath: /home/steam/csgo/csgo/autoexec.cfg
           subPath: autoexec.cfg
@@ -47,6 +48,7 @@ spec:
             items:
             - key: server.cfg
               path: server.cfg
+              
         - name: csgo-configuration-autoexec-cfg
           configMap:
             name: csgo-configuration

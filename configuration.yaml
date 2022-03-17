@@ -6,6 +6,8 @@ data:
     sv_lan 0 //This should always be set, so you know it's not on
     exec banned_user.cfg
     exec banned_ip.cfg
+  gamemodes.txt: ""
+  gamemodes_server.txt: ""
   server.cfg: |
     mp_autoteambalance 0
     mp_limitteams 0
@@ -14,6 +16,7 @@ data:
     mp_round_restart_delay 5.0
     mp_halftime_duration 5
     mp_match_end_restart_delay 10
+    sv_password "12345"
     writeid
     writeip
 kind: ConfigMap
