@@ -32,14 +32,14 @@ spec:
               secretKeyRef:
                 name: workshop-token
                 key: SRCDS_WORKSHOP_AUTHKEY             
-      volumeMounts:
-        - name: csgo-configuration-server-cfg
-          mountPath: /home/steam/csgo/csgo/server.cfg
-          subPath: server.cfg
+        volumeMounts:
+          - name: csgo-configuration-server-cfg
+            mountPath: /home/steam/csgo/csgo/cfg/server.cfg
+            subPath: server.cfg
 
-        - name: csgo-configuration-autoexec-cfg
-          mountPath: /home/steam/csgo/csgo/autoexec.cfg
-          subPath: autoexec.cfg
+          - name: csgo-configuration-autoexec-cfg
+            mountPath: /home/steam/csgo/csgo/cfg/autoexec.cfg
+            subPath: autoexec.cfg
           
       volumes:
         - name: csgo-configuration-server-cfg
