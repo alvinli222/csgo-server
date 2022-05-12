@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: csgo-ns-tcp
+  name: csgo-ns-tcp
+  namespace: csgo-server
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 104.40.84.197
+  ports:
+  - name: steam
+    port: 27015
+    protocol: TCP
+    targetPort: 27015
+  selector:
+    app: csgo-deployment
